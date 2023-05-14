@@ -1,0 +1,81 @@
+
+.list {
+    max-width: 282px;
+    width: 100%;
+    height: min-content;
+    background: #EBECF0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.scrollWrapper {
+    padding: 12px;
+    min-height: 200px;
+    height: min-content;
+    max-height: 560px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+    width: 12px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    border-radius: 5px;
+}
+
+.listTitle {
+    margin: 0 0 15px;
+    padding: 12px 0 0 12px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+
+.task {
+    padding: 7px 9px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.taskLink {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+
+.addBtn {
+    margin-bottom: 5px;
+    padding: 4px 6px;
+    background: none;
+    border: none;
+    color: #5E6C84;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.addBtn:hover {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.noTasks {
+    margin: 0 0 25px;
+}

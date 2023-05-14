@@ -1,0 +1,52 @@
+.form {
+    background: #EBECF0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+.textArea {
+    padding: 7px 9px;
+    background: #fff;
+    margin: 7px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input::placeholder,
+.textArea::placeholder {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+
+.textArea {
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.submitBtn {
+    background: #0079BF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 102px;
+    padding: 4px 8px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    align-self: start;
+    transition: all .2s linear;
+}
+
+.submitBtn:hover {
+    opacity: .7;
+}

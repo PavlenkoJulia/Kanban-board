@@ -1,0 +1,26 @@
+.select {
+    width: 258px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    outline: none;
+
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+
+    appearance: none;
+    background-image: url(../../assets/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 3% top 50%;
+}
+
+.select:focus {
+    outline: none;
+}

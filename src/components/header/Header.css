@@ -1,0 +1,28 @@
+.header {
+    padding: 5px 16px 5px 20px;
+    min-height: 55px;
+    background: #0067A3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0;
+}
+
+.logo_wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatar {
+    margin-right: 10px;
+}
