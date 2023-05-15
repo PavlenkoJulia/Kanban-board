@@ -14,7 +14,7 @@ const SelectTask = props => {
 
   return (
     <div className='select_wrapper'>
-      <select className='select' onChange={handleMoveTask} disabled={false}>
+      <select className='select' onChange={handleMoveTask}>
         <option defaultValue="empty">+ Add card</option>
         {tasks.map(task => {
           return <option key={task.id} value={task.id}>{task.title}</option>

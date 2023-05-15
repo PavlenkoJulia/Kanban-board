@@ -12,9 +12,8 @@ const List = props => {
 
     const handleAddNewClick = () => {
         setFormVisible(!isFormVisible)
-        setSelectVisible(!isSelectVisible)
     }
-
+    
     const formSubmit = (title, description) => {
         addNewTask(title, description)
         setFormVisible(false)
@@ -41,8 +40,8 @@ const List = props => {
                     <Form formSubmit={formSubmit}/>
                 )}
 
-                {type === LIST_TYPES.READY && !isSelectVisible &&
-                    <SelectTask 
+                {type === LIST_TYPES.READY && tasksBacklog.length > 0 && !isSelectVisible &&
+                    <SelectTask
                         tasks={tasksBacklog}
                         type={type}
                         changeStatus={changeStatus}
@@ -50,17 +49,17 @@ const List = props => {
                     />
                 }
 
-                {type === LIST_TYPES.IN_PROGRESS && !isSelectVisible &&
-                    (<SelectTask 
+                {type === LIST_TYPES.IN_PROGRESS && tasksReady.length > 0 && !isSelectVisible &&
+                    <SelectTask
                         tasks={tasksReady}
                         type={type}
                         changeStatus={changeStatus}
                         setSelectVisible={setSelectVisible}
-                    />)
+                    />
                 }
 
-                {type === LIST_TYPES.FINISHED && !isSelectVisible &&
-                    <SelectTask 
+                {type === LIST_TYPES.FINISHED && tasksInProgress.length > 0 && !isSelectVisible &&
+                    <SelectTask
                         tasks={tasksInProgress}
                         type={type}
                         changeStatus={changeStatus}
@@ -68,17 +67,18 @@ const List = props => {
                     />
                 }
 
-                {type !== LIST_TYPES.BACKLOG && (isSelectVisible) &&(
-                    <SelectTask disabled={
-                        (type === LIST_TYPES.READY) ? (tasksBacklog.length ? false : true)
-                        :
-                            (type === LIST_TYPES.IN_PROGRESS)? (tasksReady.length ? false : true)
-                            : 
-                                (type === LIST_TYPES.FINISHED)? (tasksInProgress.length ? false : true)
-                                : 
-                                true
-                    }/>
-                )}
+                {type === LIST_TYPES.READY && tasksBacklog.length === 0 && !isSelectVisible &&
+                    <button className='disabledBtn' disabled={true}>+ Add card</button>
+                }
+
+                {type === LIST_TYPES.IN_PROGRESS && tasksReady.length === 0 && !isSelectVisible &&
+                    <button className='disabledBtn' disabled={true}>+ Add card</button>
+                }
+
+                {type === LIST_TYPES.FINISHED && tasksInProgress.length === 0 && !isSelectVisible &&
+                    <button className='disabledBtn' disabled={true}>+ Add card</button>
+                }
+
             </div>
 
         </div>
