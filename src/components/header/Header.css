@@ -21,8 +21,73 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
 
 .avatar {
     margin-right: 10px;
+}
+
+.arrow {
+    animation: rotate .3s linear;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(180deg);}
+}
+
+.dropMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 65px;
+    right: 10px;
+    background: #fff;
+    padding: 8px 7px;
+    border: none;
+    border-radius: 5px;
+    width: 134px;
+}
+
+.dropMenu-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropMenu-link {
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    transition: all .2s linear;
+}
+
+.dropMenu-link:hover {
+    opacity: .8;
+    color: #0067A3;
+}
+
+.arrowMenu {
+    position: absolute;
+    left: 90px;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+}
+
+@media (max-width: 480px) {
+    .header {
+        background: #0079BF;
+        height: auto;
+    }
+
+    .title {
+        display: none;
+    }
 }

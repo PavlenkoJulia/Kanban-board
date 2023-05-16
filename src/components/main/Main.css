@@ -3,3 +3,9 @@
     padding: 20px;
     height: calc(100vh - 105px);
 }
+
+@media (max-width: 768px) {
+    .main {
+        height: 100%;
+    }
+}

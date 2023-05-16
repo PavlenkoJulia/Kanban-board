@@ -12,6 +12,7 @@ const SelectTask = props => {
     setSelectVisible(false)
   }
 
+
   return (
     <div className='select_wrapper'>
       <select className='select' onChange={handleMoveTask}>

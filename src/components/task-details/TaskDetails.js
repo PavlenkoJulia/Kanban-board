@@ -1,6 +1,7 @@
 import { useMatch, Link } from 'react-router-dom';
 import { LIST_TYPES, LIST_COPY } from '../../config';
 import './TaskDetails.css';
+import '../selectTask/selectTask.css';
 
 const TaskDetail = (props) => {
     const match = useMatch("/tasks/:taskId")
@@ -27,7 +28,7 @@ const TaskDetail = (props) => {
                     <h2 className='heading'>{task.title}</h2>
                 </div>
                 <p className='taskDescription'>{task.description || '(no description)'}</p>
-                <select onChange={handleChange} value={task.status}>
+                <select className='select  descriptionSelect' onChange={handleChange} value={task.status}>
                     {Object.values(LIST_TYPES).map(list => {
                         return <option key={list} value={list}>{LIST_COPY[list]}</option>
                     })}
